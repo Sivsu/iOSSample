@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DemoViewController : UIViewController
-
+    @property (nonatomic, weak) IBOutlet UILabel* greetingLabel;
+    @property (nonatomic, weak) IBOutlet UITextField* nameText;
+-(IBAction)greetUser:(id)sender;
 @end

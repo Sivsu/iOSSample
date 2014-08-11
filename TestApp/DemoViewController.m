@@ -7,6 +7,7 @@
 //
 
 #import "DemoViewController.h"
+#import "UIView+DemoViewCategory.h"
 
 @interface DemoViewController ()
 
@@ -18,6 +19,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [self.view DismissKeyboardView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,5 +27,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (IBAction)greetUser:(id)sender {
+    NSString *name = self.nameText.text;
+    self.greetingLabel.text = [@"Welcome " stringByAppendingString:name];
+
+}
+
 
 @end
